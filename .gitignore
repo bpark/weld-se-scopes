@@ -1,0 +1,6 @@
+target/
+*.iml
+*.ipr
+*.iws
+atlassian-ide-plugin.xml
+.idea
