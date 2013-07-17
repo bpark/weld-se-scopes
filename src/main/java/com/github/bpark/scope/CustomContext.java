@@ -32,12 +32,4 @@ public class CustomContext extends AbstractThreadLocalMapContext {
     protected boolean isCreationLockRequired() {
         return false;
     }
-
-    @Override
-    public String toString()
-    {
-        String active = isActive() ? "Active " : "Inactive ";
-        String beanStoreInfo = getBeanStore() == null ? "" : getBeanStore().toString();
-        return active + "thread context " + beanStoreInfo;
-    }
 }

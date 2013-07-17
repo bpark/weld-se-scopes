@@ -34,11 +34,11 @@ public class CustomScopeExtension implements Extension {
 
     public void afterBeanDiscovery(@Observes AfterBeanDiscovery event, BeanManager manager) {
         BeanStore beanStore = new HashMapBeanStore();
-        final CustomContext threadContext = new CustomContext();
-        threadContext.setBeanStore(beanStore);
+        final CustomContext customContext = new CustomContext();
+        customContext.setBeanStore(beanStore);
 
-        threadContext.setActive(true);
-        event.addContext(threadContext);
-        CUSTOM_CONTEXT = threadContext;
+        customContext.setActive(true);
+        event.addContext(customContext);
+        CUSTOM_CONTEXT = customContext;
     }
 }

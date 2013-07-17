@@ -36,9 +36,9 @@ public class ScopeStarter implements IServiceLooper {
 
     @Override
     public void callService() {
-        final CustomContext threadContext = CustomScopeExtension.CUSTOM_CONTEXT;
-        threadContext.setBeanStore(new HashMapBeanStore());
-        threadContext.setActive(true);
+        final CustomContext context = CustomScopeExtension.CUSTOM_CONTEXT;
+        context.setBeanStore(new HashMapBeanStore());
+        context.setActive(true);
         serviceLooper.callService();
     }
 }
